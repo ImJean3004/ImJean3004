@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finalizar compra · FRISBY S.A</title>
+  <meta name="description" content="FRISBY S.A: tienda ficticia de pollo apanado para un laboratorio académico de Google Analytics 4.">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script>try{if(localStorage.getItem('frisby_monitor_oculto')==='1')document.documentElement.classList.add('monitor-oculto')}catch(e){}</script>
+</head>
+<body>
+  <header class="cabecera">
+    <div class="interior">
+      <a class="marca" href="index.html" aria-label="FRISBY S.A, ir al inicio">
+        <span class="marca-nombre">Frisby</span><span class="marca-sa">S.A</span>
+      </a>
+      <nav class="menu" aria-label="Principal">
+        <a href="index.html">Catálogo</a>
+        <a href="carrito.html">Carrito <span class="contador" id="contador-carrito">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="interior contenido">
+    <h1 class="titulo-pagina">Finalizar compra</h1>
+
+    <div id="checkout-vacio" class="vacio" hidden>
+      <h2>No hay productos para pagar</h2>
+      <p>Tu carrito está vacío. Agrega productos para continuar.</p>
+      <a class="boton" href="index.html">Ver el catálogo</a>
+    </div>
+
+    <div id="checkout" class="checkout-grid">
+      <section class="panel-pasos">
+        <ol class="pasos" aria-label="Pasos del checkout">
+          <li id="ind-1" class="activo">1. Envío</li>
+          <li id="ind-2">2. Pago simulado</li>
+        </ol>
+
+        <div id="paso-1">
+          <h2 id="titulo-paso-1" tabindex="-1">Datos de envío</h2>
+          <p class="nota">Todo es ficticio: no escribas datos reales. Esta tienda no pide ni guarda correo, teléfono ni documento.</p>
+
+          <div class="campo">
+            <label for="nombre">Nombre ficticio</label>
+            <input id="nombre" type="text" maxlength="40" autocomplete="off" placeholder="Por ejemplo: Cliente Demo">
+          </div>
+
+          <div class="campo">
+            <label for="pais">País de destino</label>
+            <select id="pais" autocomplete="off"></select>
+          </div>
+
+          <fieldset class="campo opciones">
+            <legend>Servicio de envío</legend>
+            <label class="opcion">
+              <input type="radio" name="servicio" value="Estándar" checked>
+              <span><strong>Estándar</strong><small id="precio-Estándar">Elige un país para ver la tarifa</small></span>
+            </label>
+            <label class="opcion">
+              <input type="radio" name="servicio" value="Express">
+              <span><strong>Express</strong><small id="precio-Express">Elige un país para ver la tarifa</small></span>
+            </label>
+          </fieldset>
+
+          <p id="error-envio" class="mensaje mensaje-error" role="alert" hidden></p>
+          <button type="button" id="continuar" class="boton">Continuar al pago</button>
+        </div>
+
+        <div id="paso-2" hidden>
+          <h2 id="titulo-paso-2" tabindex="-1">Pago simulado</h2>
+          <p class="nota">Simulación: aquí no se piden datos de tarjeta, cuentas ni documentos. Elige un método y confirma.</p>
+
+          <fieldset class="campo opciones">
+            <legend>Método de pago</legend>
+            <label class="opcion"><input type="radio" name="pago" value="Tarjeta de crédito"><span><strong>Tarjeta de crédito</strong><small>Visa, Mastercard y otras (simulado)</small></span></label>
+            <label class="opcion"><input type="radio" name="pago" value="PSE"><span><strong>PSE</strong><small>Débito desde tu banco (simulado)</small></span></label>
+            <label class="opcion"><input type="radio" name="pago" value="Nequi"><span><strong>Nequi</strong><small>Billetera digital (simulado)</small></span></label>
+            <label class="opcion"><input type="radio" name="pago" value="PayPal"><span><strong>PayPal</strong><small>Pago internacional (simulado)</small></span></label>
+          </fieldset>
+
+          <p id="error-pago" class="mensaje mensaje-error" role="alert" hidden></p>
+          <div class="acciones">
+            <button type="button" id="volver" class="boton boton-secundario">Volver al envío</button>
+            <button type="button" id="pagar" class="boton">Pagar (simulado)</button>
+          </div>
+        </div>
+      </section>
+
+      <aside id="resumen-checkout" class="resumen" aria-label="Resumen del pedido"></aside>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="interior">
+      <p><strong>FRISBY S.A es una tienda ficticia.</strong> Sitio académico de simulación para un laboratorio de analítica web: no procesa pagos reales y no guarda datos personales. Usa Google Analytics 4 para medir la navegación.</p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/monitor.js"></script>
+  <script src="js/comun.js"></script>
+  <script src="js/pagina-checkout.js"></script>
+</body>
+</html>

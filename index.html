@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FRISBY S.A · Pollo apanado crocante</title>
+  <meta name="description" content="FRISBY S.A: tienda ficticia de pollo apanado para un laboratorio académico de Google Analytics 4.">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script>try{if(localStorage.getItem('frisby_monitor_oculto')==='1')document.documentElement.classList.add('monitor-oculto')}catch(e){}</script>
+</head>
+<body>
+  <header class="cabecera">
+    <div class="interior">
+      <a class="marca" href="index.html" aria-label="FRISBY S.A, ir al inicio">
+        <span class="marca-nombre">Frisby</span><span class="marca-sa">S.A</span>
+      </a>
+      <nav class="menu" aria-label="Principal">
+        <a href="index.html" aria-current="page">Catálogo</a>
+        <a href="carrito.html">Carrito <span class="contador" id="contador-carrito">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="portada">
+      <div class="interior">
+        <div class="portada-insignia">
+          <span class="insignia-estrella" aria-hidden="true">★</span>
+          <span>100% Crocante · Sabor Tradicional Frisby</span>
+        </div>
+        <h1>Crocante por fuera,<br>dorado por dentro.</h1>
+        <p>Pollo apanado congelado, listo para freír u hornear. Enviamos a toda Colombia y al exterior.</p>
+        <div class="portada-chips">
+          <span class="chip-item">⚡ Listo en minutos</span>
+          <span class="chip-item">❄️ Cadena de frío asegurada</span>
+          <span class="chip-item">📦 Envíos a todo el país</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="interior contenido">
+      <button type="button" id="banner-cupon" class="banner-cupon">
+        <span class="banner-texto">
+          <span class="banner-titulo">10 % de descuento en tu primer pedido</span>
+          <span class="banner-detalle">Usa el cupón <strong>BIENVENIDA10</strong>. Va perfecto con el Combo Familiar y la Cubeta Fiesta.</span>
+        </span>
+        <span class="banner-cta" id="banner-cta">Aplicar cupón y ver carrito</span>
+      </button>
+
+      <section aria-labelledby="titulo-catalogo">
+        <h2 id="titulo-catalogo" class="titulo-seccion">Catálogo principal</h2>
+        <div id="catalogo" class="catalogo"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="interior">
+      <p><strong>FRISBY S.A es una tienda ficticia.</strong> Sitio académico de simulación para un laboratorio de analítica web: no procesa pagos reales y no guarda datos personales. Usa Google Analytics 4 para medir la navegación.</p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/monitor.js"></script>
+  <script src="js/comun.js"></script>
+  <script src="js/pagina-index.js"></script>
+</body>
+</html>
