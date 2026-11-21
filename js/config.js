@@ -17,6 +17,6 @@
       false → los eventos se envían sin modo depuración.
    ===================================================================== */
 window.TIENDA_CONFIG = {
-  GA_MEASUREMENT_ID: "G-XXXXXXXXXX", // ← pega tu ID de medición entre las comillas
+  GA_MEASUREMENT_ID: "G-E9VEHT0JXL", // ← pega tu ID de medición entre las comillas
   DEBUG_MODE: true                    // ← true para usar DebugView, false para apagarlo
 };
